@@ -1,28 +1,36 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-const spanish = "Spanish"
-const swedish = "Swedish"
-const englishPrefix = "Hello, "
-const spanishPrefix = "Hola, "
-const swedishPrefix = "Hej, "
+const (
+	spanish = "Spanish"
+	swedish = "Swedish"
+
+	englishPrefix = "Hello, "
+	spanishPrefix = "Hola, "
+	swedishPrefix = "Hej, "
+)
 
 func Hello(name string, language string) string {
 	if name == "" {
 		name = "World"
 	}
 
-	prefix := englishPrefix
+	return greetingPrefix(language) + name
+}
 
+func greetingPrefix(language string) (prefix string) {
 	switch language {
 	case spanish:
 		prefix = spanishPrefix
 	case swedish:
 		prefix = swedishPrefix
+	default:
+		prefix = englishPrefix
 	}
-
-	return prefix + name
+	return
 }
 
 // main is our application entry point

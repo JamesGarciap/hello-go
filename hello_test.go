@@ -33,6 +33,13 @@ func TestHello(t *testing.T) {
 	})
 }
 
+func TestGreetingPrefix(t *testing.T) {
+	got := greetingPrefix("Spanish")
+	want := "Hola, "
+
+	assertCorrectMessage(t, got, want)
+}
+
 func assertCorrectMessage(t testing.TB, got string, want string) {
 	t.Helper()
 
