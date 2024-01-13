@@ -15,11 +15,10 @@ func Hello(name string, language string) string {
 
 	prefix := englishPrefix
 
-	if language == spanish {
+	switch language {
+	case spanish:
 		prefix = spanishPrefix
-	}
-
-	if language == swedish {
+	case swedish:
 		prefix = swedishPrefix
 	}
 
