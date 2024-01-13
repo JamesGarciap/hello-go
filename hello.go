@@ -2,12 +2,22 @@ package main
 
 import "fmt"
 
-func Hello(name string) string {
-	if name != "" {
-		return "Hello, " + name
+const spanish = "Spanish"
+const englishPrefix = "Hello, "
+const spanishPrefix = "Hola, "
+
+func Hello(name string, language string) string {
+	if name == "" {
+		name = "World"
 	}
 
-	return "Hello, World!"
+	prefix := englishPrefix
+
+	if language == spanish {
+		prefix = spanishPrefix
+	}
+
+	return prefix + name
 }
 
 // main is our application entry point
