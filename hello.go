@@ -2,7 +2,11 @@ package main
 
 import "fmt"
 
-func Hello() string {
+func Hello(name string) string {
+	if name != "" {
+		return "Hello, " + name
+	}
+
 	return "Hello, World!"
 }
 
