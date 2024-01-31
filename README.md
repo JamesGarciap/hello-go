@@ -16,3 +16,22 @@ go run hello.go
 ```
 go test hello
 ```
+
+### Install Godoc
+
+```bash
+go install golang.org/x/tools/cmd/godoc@latest
+```
+Then add the bin folder to the PATH variable
+
+```bash
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+Test the docs server
+
+```bash
+godoc -http=:6060
+```
+
+Navigate to pkg on the browser at http://localhost:6060/pkg/
