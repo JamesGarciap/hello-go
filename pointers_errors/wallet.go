@@ -27,3 +27,7 @@ func (w *Wallet) Deposit(amount Chichicoin) {
 func (w *Wallet) Balance() Chichicoin {
 	return w.balance
 }
+
+func (w *Wallet) Withdraw(amount Chichicoin) {
+	w.balance -= amount
+}
