@@ -12,9 +12,30 @@ and extra relevant for covering the GO learning curve.
 go run hello.go
 ```
 
-### execute tests
+### Running Tests
 ```
 go test hello
+```
+
+#### Testing Benchmark
+```
+go test -bench=.
+```
+
+#### Testing Coverage
+```
+go test -cover
+```
+
+#### Verbose output
+```
+go test -v
+```
+
+
+#### Scoped Tests
+```
+go test -run TestArea/Rectangle
 ```
 
 ### Install Godoc
