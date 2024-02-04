@@ -56,3 +56,17 @@ godoc -http=:6060
 ```
 
 Navigate to pkg on the browser at http://localhost:6060/pkg/
+
+
+## Error checking
+
+Install `errcheck` to help identify errors not being properly handled
+
+```bash
+go install github.com/kisielk/errcheck@latest
+```
+and run 
+
+```bash
+errcheck .
+```
